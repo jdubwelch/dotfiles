@@ -1,0 +1,30 @@
+alias phpspec="vendor/bin/phpspec"
+alias phpunit="vendor/bin/phpunit"
+alias codecept="vendor/bin/codecept"
+alias ctagmake="ctags -R -f .tags --regex-php='/^[ \t]*trait[ \t]+([a-z0_9_]+)/\1/t,traits/i' --regex-php='/abstract class ([^ ]*)/\1/c/' --regex-php='/interface ([^ ]*)/\1/c/' --regex-php='/(public |static |abstract |protected |private )+ function +([^ \(]*)/\2/f/' --exclude=.git"
+alias hg='history | grep '
+
+# GIT
+alias gs='git status '
+alias ga='git add '
+alias gaa='git add -A'
+alias gb='git branch '
+alias gbl='git branch -l'
+alias gc='git commit'
+alias gcm='git commit -m '
+alias gd='git diff'
+alias go='git checkout '
+alias gk='gitk --all&'
+alias gx='gitx --all'
+
+# Vagrant
+alias vu='vagrant up'
+alias vd='vagrant destroy'
+alias vbu='vagrant box update'
+alias vs='vagrant ssh'
+alias vp='vagrant provision'
+alias vh='vagrant halt'
+
+# Laravel
+alias art='php artisan';
+

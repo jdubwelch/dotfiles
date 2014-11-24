@@ -25,6 +25,11 @@ alias vs='vagrant ssh'
 alias vp='vagrant provision'
 alias vh='vagrant halt'
 
+# Homestead
+alias hu='homestead up'
+alias hh='homestead halt'
+alias hs='homestead ssh'
+
 # Laravel
 alias art='php artisan';
 

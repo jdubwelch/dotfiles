@@ -20,7 +20,7 @@ return PhpCsFixer\Config::create()
         ],
         'array_indentation' => true,
         'binary_operator_spaces' => [
-        	'operators' => ['=>' => 'align_single_space_minimal']
+        	'align_double_arrow' => true
         ],
         'no_whitespace_in_blank_line' => true
     ])

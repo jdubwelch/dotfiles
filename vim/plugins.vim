@@ -12,6 +12,7 @@ Plugin 'ctrlpvim/ctrlp.vim'
 Plugin 'tpope/vim-commentary'
 Plugin 'StanAngeloff/php.vim'
 Plugin 'shawncplus/phpcomplete.vim'
+Plugin 'vim-php/vim-php-refactoring'
 
 
 " All of your Plugins must be added before the following line

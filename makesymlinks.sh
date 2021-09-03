@@ -56,4 +56,7 @@ else
 fi
 }
 
+# Install ZSH-Z plugin
+it clone https://github.com/agkozak/zsh-z $ZSH_CUSTOM/plugins/zsh-z
+
 install_zsh

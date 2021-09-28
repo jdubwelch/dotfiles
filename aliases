@@ -16,6 +16,11 @@ alias gd='git diff'
 alias go='git checkout '
 alias gk='gitk --all&'
 alias gx='gitx --all'
+alias gmnffne='git merge --no-ff --no-edit'
+alias gfao='git fetch --all && git checkout'
+alias gcf='git commit --fixup'
+alias grbia='git rebase -i --autosquash'
+alias gch='git rev-parse --short HEAD | pbcopy'
 
 # Vagrant
 alias vu='vagrant up'
@@ -32,4 +37,7 @@ alias hs='homestead ssh'
 
 # Laravel
 alias art='php artisan';
+
+# Composer
+alias cda='composer dumpautoload'
 

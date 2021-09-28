@@ -61,3 +61,6 @@ function switchDevelop {
     source ~/.bashrc
     sudo service apache2 restart
 }
+
+PS1='[\u@\h \W$(__docker_machine_ps1)]\$ '
+

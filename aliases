@@ -41,3 +41,5 @@ alias art='php artisan';
 # Composer
 alias cda='composer dumpautoload'
 
+# Docker
+alias dsh='docker compose exec server bash'

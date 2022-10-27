@@ -38,6 +38,9 @@ set guioptions-=l
 set guioptions-=L
 set guioptions-=r
 set guioptions-=R
+
+" Macros
+let @j='%%v%J'      " Join the contents of a bracket/brace/paragraph. 
 	
 
 "Use 24-bit (true-color) mode in Vim/Neovim when outside tmux.

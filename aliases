@@ -35,11 +35,21 @@ alias hu='homestead up'
 alias hh='homestead halt'
 alias hs='homestead ssh'
 
-# Laravel
-alias art='php artisan';
+# Laravel Sail
+alias sail='[ -f sail ] && bash sail || bash vendor/bin/sail'
+alias sa='sail artisan '
+alias st='sail test'
+alias stf='sail test --filter '
+alias sdtf='sail debug test --filter '
 
 # Composer
 alias cda='composer dumpautoload'
 
 # Docker
 alias dsh='docker compose exec server bash'
+
+# tmux
+alias t="tmux"
+alias ta="t a -t"
+alias tls="t ls"
+alias tn="t new -t"

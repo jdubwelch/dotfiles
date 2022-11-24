@@ -1,0 +1,31 @@
+pane	0	1	0	:	1	:/Users/jasonwelch/code	1	zsh	:
+pane	0	2	0	:	1	:/Users/jasonwelch/code/laravel-mls-api	1	zsh	:
+pane	0	3	0	:	1	:/Users/jasonwelch/est/app/BulkDataAPI	1	zsh	:
+pane	0	4	0	:	1	:/Users/jasonwelch/est/data-source-api	1	bash	:bash vendor/bin/sail shell
+pane	0	5	0	:	1	:/Users/jasonwelch/est/data-source-api	1	zsh	:
+pane	0	6	0	:	1	:/Users/jasonwelch	1	zsh	:
+pane	0	7	0	:	1	:/Users/jasonwelch/code/mls-api	1	zsh	:
+pane	0	8	0	:-	1	:/Users/jasonwelch/kube/idx-app/production	1	kubectl	:kubectl exec -it idx-app-web-6b4ff45995-zvtkh -- /bin/bash
+pane	0	9	1	:*	1	:/Users/jasonwelch/kube/idx-app/production	1	zsh	:
+pane	1	1	1	:##*	1	:/Users/jasonwelch	1	vim	:vim .tmux.conf
+pane	2	1	1	:##*	1	:/Users/jasonwelch	1	zsh	:
+pane	3	1	1	:##*	1	:/Users/jasonwelch	1	zsh	:
+pane	4	1	1	:##*	1	:/Users/jasonwelch	1	zsh	:
+pane	5	1	1	:##*	1	:/Users/jasonwelch	1	zsh	:
+pane	6	1	1	:##*	1	:/Users/jasonwelch	1	zsh	:
+window	0	1	:zsh	0	:	c41e,97x75,0,0,1	:
+window	0	2	:foo	0	:	c41f,97x75,0,0,2	off
+window	0	3	:bulkdata	0	:	c420,97x75,0,0,3	off
+window	0	4	:data-source-api	0	:	ba61,213x53,0,0,4	off
+window	0	5	:zsh	0	:	c422,97x75,0,0,5	:
+window	0	6	:docker	0	:	c423,97x75,0,0,6	off
+window	0	7	:terraform	0	:	c424,97x75,0,0,7	off
+window	0	8	:idx-live	0	:-	5e63,213x44,0,0,14	off
+window	0	9	:zsh	1	:*	5e64,213x44,0,0,15	:
+window	1	1	:my shell	1	:##*	d185,144x68,0,0,8	off
+window	2	1	:zsh	1	:##*	d186,144x68,0,0,9	:
+window	3	1	:zsh	1	:##*	68ef,144x68,0,0,10	:
+window	4	1	:zsh	1	:##*	68f0,144x68,0,0,11	:
+window	5	1	:zsh	1	:##*	68f1,144x68,0,0,12	:
+window	6	1	:zsh	1	:##*	68f2,144x68,0,0,13	:
+state	0	

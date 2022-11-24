@@ -45,13 +45,15 @@ ZSH_THEME="avit"
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
-plugins=(git Composer zsh-z docker-compose kubectl zsh-autosuggestions zsh-syntax-highlighting)
+#plugins=(git Composer zsh-z docker-compose kubectl zsh-autosuggestions zsh-syntax-highlighting)
+plugins=(git Composer zsh-z docker-compose kubectl zsh-syntax-highlighting)
+export ZSH_HIGHLIGHT_MAXLENGTH=60
 
 source $ZSH/oh-my-zsh.sh
 
 # User configuration
 
-export PATH="/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/bin:/Users/welch/.composer/vendor/bin"
+export PATH="/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/bin"
 # export MANPATH="/usr/local/man:$MANPATH"
 
 # You may need to manually set your language environment
@@ -81,7 +83,6 @@ export PATH="/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/bin:/Users/
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 export PATH="/usr/local/opt/icu4c/bin:$PATH"
 export PATH="/usr/local/opt/icu4c/sbin:$PATH"
-export PATH="/usr/local/opt/php@7.1/bin:$PATH"
 
 
 # The next line updates PATH for the Google Cloud SDK.
@@ -89,3 +90,11 @@ if [ -f '/Users/jasonwelch/Downloads/google-cloud-sdk/path.zsh.inc' ]; then . '/
 
 # The next line enables shell command completion for gcloud.
 if [ -f '/Users/jasonwelch/Downloads/google-cloud-sdk/completion.zsh.inc' ]; then . '/Users/jasonwelch/Downloads/google-cloud-sdk/completion.zsh.inc'; fi
+
+  export NVM_DIR="$HOME/.nvm"
+  [ -s "/usr/local/opt/nvm/nvm.sh" ] && . "/usr/local/opt/nvm/nvm.sh"  # This loads nvm
+  [ -s "/usr/local/opt/nvm/etc/bash_completion.d/nvm" ] && . "/usr/local/opt/nvm/etc/bash_completion.d/nvm"  # This loads nvm bash_completion
+
+eval "$(direnv hook zsh)"
+export HOMEBREW_GITHUB_API_TOKEN=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
+export USE_GKE_GCLOUD_AUTH_PLUGIN=True

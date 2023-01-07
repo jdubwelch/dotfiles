@@ -7,6 +7,8 @@ export ZSH=$HOME/.oh-my-zsh
 # time that oh-my-zsh is loaded.
 ZSH_THEME="avit"
 
+#ZSH_THEME_RANDOM_CANDIDATES=( "fino" "avit" "half-life" "terminalparty" )
+
 # Uncomment the following line to use case-sensitive completion.
 # CASE_SENSITIVE="true"
 
@@ -46,10 +48,29 @@ ZSH_THEME="avit"
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
 #plugins=(git Composer zsh-z docker-compose kubectl zsh-autosuggestions zsh-syntax-highlighting)
-plugins=(git Composer zsh-z docker-compose kubectl zsh-syntax-highlighting)
+plugins=(git Composer zsh-z Fzf docker-compose kubectl kube-ps1 zsh-autosuggestions  zsh-syntax-highlighting)
 export ZSH_HIGHLIGHT_MAXLENGTH=60
 
 source $ZSH/oh-my-zsh.sh
+
+### Fix slowness of pastes with zsh-syntax-highlighting.zsh
+pasteinit() {
+  OLD_SELF_INSERT=${${(s.:.)widgets[self-insert]}[2,3]}
+  zle -N self-insert url-quote-magic # I wonder if you'd need `.url-quote-magic`?
+}
+
+pastefinish() {
+  zle -N self-insert $OLD_SELF_INSERT
+}
+zstyle :bracketed-paste-magic paste-init pasteinit
+zstyle :bracketed-paste-magic paste-finish pastefinish
+### Fix slowness of pastes
+
+#source ~/.zsh/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
+
+# kube-ps1
+source "/usr/local/opt/kube-ps1/share/kube-ps1.sh"
+PS1='$(kube_ps1)'$PS1
 
 # User configuration
 
@@ -95,6 +116,8 @@ if [ -f '/Users/jasonwelch/Downloads/google-cloud-sdk/completion.zsh.inc' ]; the
   [ -s "/usr/local/opt/nvm/nvm.sh" ] && . "/usr/local/opt/nvm/nvm.sh"  # This loads nvm
   [ -s "/usr/local/opt/nvm/etc/bash_completion.d/nvm" ] && . "/usr/local/opt/nvm/etc/bash_completion.d/nvm"  # This loads nvm bash_completion
 
+# Enable Direnv
 eval "$(direnv hook zsh)"
+
 export HOMEBREW_GITHUB_API_TOKEN=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
 export USE_GKE_GCLOUD_AUTH_PLUGIN=True

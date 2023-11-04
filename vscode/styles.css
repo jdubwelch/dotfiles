@@ -1,0 +1,85 @@
+/* Make the cursor sexy! */
+.monaco-editor .cursor {
+    background: linear-gradient(to bottom, #7f00ff, #e100ff) !important; color: #292D3E !important;
+}
+
+/* Show the file at the top but faded. */
+.title a.label-name {
+    opacity: .4;
+}
+
+/* File path even fainter. */
+.monaco-icon-label>.monaco-icon-label-container>.monaco-icon-description-container>.label-description {
+    opacity: .2;
+}
+
+/*  Hide top-right buttons */
+.editor .title .actions-container .action-item a {
+    visibility: hidden;
+}
+/* Show top-right "settings goto icon" */
+.editor .title .actions-container .action-item a[title="Open Settings (UI)"] {
+    visibility: initial;
+}
+.editor .title .actions-container .action-item a[title="Open Settings (JSON)"] {
+     visibility: initial;
+}
+
+/* Only show the scrollbar on hover. */
+.editor .scrollbar .slider { visibility: hidden; }
+.editor .scrollbar:hover .slider { visibility: initial; }
+
+
+/**
+ * Make command palette prettier
+ */
+.monaco-workbench .quick-input-widget {
+    background: var(--vscode-input-background) !important;
+    top: 20vh !important;
+    overflow: hidden !important;
+    border-radius: .3rem !important;
+    box-shadow: 0 0 8px 2px rgb(0 0 0 / 16%) !important;
+    border-radius: .3rem !important; padding: 0 !important;
+}
+.monaco-workbench .quick-input-widget .quick-input-list .monaco-list-rows {
+    background: var(--vscode-input-background) !important;
+}
+.monaco-workbench .quick-input-widget .quick-input-list .monaco-list-row.focused {
+    background: var(--vscode-button-background) !important;
+}
+.monaco-workbench .quick-input-widget .quick-input-list .shadow.top {
+    height: 2rem !important; opacity: .5 !important;
+}
+.monaco-workbench .quick-input-widget .quick-input-list .monaco-progress-container.quick-input-progress.done {
+    display: none !important;
+}
+.invisible.scrollbar {
+    display: none !important;
+}
+
+/**
+ * Make find widget  prettier
+ */
+.monaco-workbench .editor-widget.find-widget {
+    border-radius: .3rem !important; right: 0 !important; margin: .5rem !important; background: var(--vscode-input-background) !important;
+}
+.monaco-workbench .editor-widget.find-widget .monaco-sash.vertical {
+    display: none !important;
+}
+.monaco-workbench .editor-widget.find-widget .toggle.left {
+    opacity: .5 !important;
+}
+.monaco-workbench .editor-widget.find-widget .find-part .controls {
+    opacity: .5 !important;
+}
+.monaco-workbench .editor-widget.find-widget .find-actions .matchesCount {
+    padding: 0 !important;
+}
+.monaco-workbench .editor-widget.find-widget:not(.visible) {
+    transform: translateY(calc(-100% - 25px)) !important;
+}
+
+/* Make suggestions widget a bit better */
+.editor-widget.suggest-widget.visible {
+    border-radius: 0 0 .3rem .3rem !important; overflow: hidden !important;
+}
